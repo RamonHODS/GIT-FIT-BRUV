@@ -1,0 +1,94 @@
+
+/* General styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #13a5d2;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Header styles */
+  header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  /* Welcome section styles */
+  .welcome-sect {
+    background-color: #e6f7ff;
+    padding: 30px;
+  }
+  
+  .welcome-cont {
+    text-align: center;
+  }
+  
+  .button-cont {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+  
+  .button-cont button {
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+    margin-bottom: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .button-cont button:hover {
+    background-color: #555;
+  }
+
+  a:focus {
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+    margin-bottom: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  /* Profile section styles */
+  .profile-sect {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 20px;
+  }
+  
+  .profile-icon {
+    max-width: 120px;
+    max-height: 120px;
+    border-radius: 50%;
+  }
+  
+  /* Goals section styles */
+  .goals-sect {
+    padding: 40px;
+  }
+  
+  .goals-cont h3 {
+    text-align: center;
+  }
+  
+  /* Progress section styles */
+  .progress-sect {
+    padding: 40px;
+  }
+  
+  /* Log section styles */
+  .log-sect {
+    background-color: #f2f2f2;
+    padding: 40px;
+  }
+  
+  .log-cont {
+    text-align: center;
+  }
