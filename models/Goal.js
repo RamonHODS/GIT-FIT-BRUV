@@ -31,17 +31,17 @@ Goal.init(
       allowNull: false,
     },
     outcome: {
-      type: DataTypes.STRING(25),
+      type: DataTypes.STRING(255),
       allowNull: false,
     },
     notes: {
-      type: DataTypes.STRING(25),
+      type: DataTypes.TEXT,
       allowNull: true,
     },
     userId: {
       type: DataTypes.INTEGER,
       references: {
-        model: user,
+        model: "user",
         key: "id",
         onDelete: "CASCADE",
       },
@@ -51,16 +51,16 @@ Goal.init(
     //to help visualize data later on I am including "G". this will require Const instance = await Model.create;
     //use consolue.log(instance.cutomID) to check that output is correct.
     hooks: {
-      beforeCreate: async (model) => {
-        model.customId = "G" + model.id;
+      beforeCreate: async (goal) => {
+        goal.customId = "G" + goal.id;
       },
     },
     sequelize,
     timestamps: false,
     freezeTableName: true,
     underscored: true,
-    modelName: "model",
+    modelName: "goal",
   }
 );
 
-module.exports = User;
+module.exports = Goal;
