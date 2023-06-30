@@ -1,11 +1,7 @@
 const { Model, DataTypes } = require("sequelize");
 const sequelize = require("../config/connection");
 
-class Goal extends Model {
-  checkPassword(loginPw) {
-    return bcrypt.compareSync(loginPw, this.password);
-  }
-}
+class Goal extends Model {}
 
 Goal.init(
   {
@@ -17,17 +13,17 @@ Goal.init(
     },
     //I would like to consider adding an additional model to provide sub options
     goal_type: {
-      type: DataTypes.ENUM([
+      type: DataTypes.ENUM(
         "Physical",
         "Mental",
         "Spiritual",
         "Emotional",
-        "Social",
-      ]),
+        "Social"
+      ),
       allowNull: false,
     },
     status: {
-      type: DataTypes.ENUM(["active", "resting", "met"]),
+      type: DataTypes.ENUM("active", "resting", "met"),
       allowNull: false,
     },
     motivation: {
