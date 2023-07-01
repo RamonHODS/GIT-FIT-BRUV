@@ -1,0 +1,96 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #13a5d2;
+  }
+  
+  /* Header styles */
+  header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  /* Goals section styles */
+  .goals-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+  }
+  
+  .card {
+    background-color: #f2f2f2;
+    border-radius: 5px;
+    padding: 20px;
+    margin-bottom: 20px;
+    width: 80%;
+  }
+  
+  .card-title {
+    text-align: center;
+  }
+  
+  .goal-type {
+    margin-bottom: 10px;
+  }
+  
+  .goal-actions {
+    display: flex;
+    justify-content: flex-end;
+  }
+  
+  .goal-actions button, a button{
+    margin-left: 10px;
+    padding: 8px 16px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .goal-actions button:hover, a:hover button{
+    background-color: #555;
+  }
+  
+  /* Notes section styles */
+  .notes-section {
+    padding: 40px;
+  }
+  
+  .notes-title {
+    text-align: center;
+  }
+  
+  .notes-list {
+    list-style-type: none;
+    padding: 0;
+    background-color: white;
+    padding: 10px;
+    border-radius: 5px;
+  }
+  
+  .notes-list li {
+    margin-bottom: 10px;
+  }
+  
+  .note-goal {
+    font-weight: bold;
+  }
+  
+  .note-status {
+    margin-left: 10px;
+  }
+
+  a:focus {
+    margin-left: 10px;
+    padding: 8px 16px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }

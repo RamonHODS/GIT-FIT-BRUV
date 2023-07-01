@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="../css/goals.css">
+  <title>Goals</title>
+</head>
+<body>
+  <header>
+    <h1 class="page-title">GOALS</h1>
+  </header>
+
+  <section class="goals-section">
+    <div class="card">
+      <h2 class="card-title">GOAL 1</h2>
+      <div class="goal-type">
+        <label for="goal-type">Goal Type:</label>
+        <select id="goal-type">
+          <option value="caloric">Caloric</option>
+          <option value="weight">Weight</option>
+          <option value="lifting">Lifting</option>
+          <option value="cardio">Cardio</option>
+          <option value="meditation">Meditation</option>
+          <option value="focus">Focus</option>
+        </select>
+      </div>
+      <p class="goal-label">GOAL:</p>
+      <div class="goal-actions">
+        <button class="met-button">MET, BRUV!</button>
+        <button class="update-button">UPDATE!</button>
+        <button class="sleep-button">SLEEP, BRUV!</button>
+      </div>
+    </div>
+
+    <div class="card">
+      <!-- Card for Goal 2 -->
+    </div>
+
+    <div class="card">
+      <!-- Card for Goal 3 -->
+    </div>
+  </section>
+
+  <section class="notes-section">
+    <h2 class="notes-title">Recently Added Notes</h2>
+    <ul class="notes-list">
+      <li>
+        <span class="note-goal">Goal 1:</span>
+        <span class="note-status">In Progress</span>
+        <p class="note-content">This is where the user puts the notes for their goals, bruvs.</p>
+      </li>
+      <li>
+        <span class="note-goal">Goal 2:</span>
+        <span class="note-status">In Progress</span>
+        <p class="note-content">This is where the user puts the notes for their goals, bruvs.</p>
+      </li>
+      <li>
+        <!-- Note 3 -->
+      </li>
+      <li>
+        <!-- Note 4 -->
+      </li>
+      <li>
+        <!-- Note 5 -->
+      </li>
+    </ul>
+  </section>
+
+  <footer>
+    <a href="../html/homepage.html"><button>BACK HOME, BRUV</button></a>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.7/handlebars.min.js"></script>
+  <script id="goals-template" type="text/x-handlebars-template">
+    <header>
+      <h1 class="page-title">GOALS</h1>
+    </header>
+
+    <section class="goals-section">
+      {{#each goals}}
+      <div class="card">
+        <h2 class="card-title">{{ goalTitle }}</h2>
+        <div class="goal-type">
+          <label for="goal-type">Goal Type:</label>
+          <select id="goal-type">
+            <option value="caloric">Caloric</option>
+            <option value="weight">Weight</option>
+            <option value="lifting">Lifting</option>
+            <option value="cardio">Cardio</option>
+            <option value="meditation">Meditation</option>
+            <option value="focus">Focus</option>
+          </select>
+        </div>
+        <p class="goal-label">GOAL:</p>
+        <div class="goal-actions">
+          <button class="met-button">MET, BRUV!</button>
+          <button class="update-button">UPDATE!</button>
+          <button class="sleep-button">SLEEP, BRUV!</button>
+        </div>
+      </div>
+      {{/each}}
+    </section>
+
+    <section class="notes-section">
+      <h2 class="notes-title">Recently Added Notes</h2>
+      <ul class="notes-list">
+        {{#each notes}}
+        <li>
+          <span class="note-goal">{{ goal }}</span>
+          <span class="note-status">{{ status }}</span>
+          <p class="note-content">{{ content }}</p>
+        </li>
+        {{/each}}
+      </ul>
+    </section>
+
+    <footer>
+      <a href="{{ homepageUrl }}"><button>BACK HOME, BRUV</button></a>
+    </footer>
+  </script>
+
+</body>
+</html>

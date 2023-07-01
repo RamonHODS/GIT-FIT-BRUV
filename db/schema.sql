@@ -1,2 +1,3 @@
-DROP DATABASE IF EXISTS 'DB name goes here';
-CREATE DATABASE 'DB name goes here';
+DROP DATABASE IF EXISTS gfb_db;
+CREATE DATABASE gfb_db;
+USE gfb_db;
