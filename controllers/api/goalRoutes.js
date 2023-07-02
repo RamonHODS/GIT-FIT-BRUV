@@ -30,22 +30,6 @@ router.get("/:id", async (req, res) => {
   }
 });
 
-router.get("/active", (req, res) => {
-  // Fetch all goals from the database
-  Goal.findAll()
-    .then((goals) => {
-      // Filter active goals
-      const activeGoals = goals.filter((goal) => goal.status === "active");
-
-      // Send the filtered active goals as a response
-      res.json(activeGoals);
-    })
-    .catch((err) => {
-      console.log(err);
-      res.status(500).json({ error: "Failed to fetch goals" });
-    });
-});
-
 //post route to make a new goal
 router.post("/", async (req, res) => {
   Goal.create(req.body)
