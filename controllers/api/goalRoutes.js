@@ -46,4 +46,22 @@ router.post("/", async (req, res) => {
     });
 });
 
+//put route to updated goal
+router.put("/:id", async (req, res) => {
+  // update product data
+  try {
+    // Update goal data
+    await Goal.update(req.body, {
+      where: {
+        id: req.params.id,
+      },
+    });
+
+    return res.sendStatus(200);
+  } catch (error) {
+    console.error(error);
+    return res.status(400).json({ error: "Failed to update the goal." });
+  }
+});
+
 module.exports = router;
