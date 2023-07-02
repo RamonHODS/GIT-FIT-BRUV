@@ -44,7 +44,7 @@ app.use(
     setHeaders: (res, filePath) => {
       const contentType = mime.getType(path.extname(filePath));
       if (contentType) {
-        res.setHeader("Content-Type", contentType);
+        res.setHeader("Content-Type", "text/css");
       }
     },
   })
