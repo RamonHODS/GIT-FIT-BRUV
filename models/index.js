@@ -6,6 +6,15 @@ const Daily = require("./Daily");
 User.hasMany(Goal, {
   foreignKey: "user_id",
 });
+
+User.hasMany(Daily, {
+  foreignKey: "user_id",
+});
+
+Daily.belongsTo(User, {
+  foreignKey: "user_id",
+});
+
 Goal.belongsTo(User, {
   foreignKey: "user_id",
 });

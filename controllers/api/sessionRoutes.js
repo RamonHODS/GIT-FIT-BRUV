@@ -1,7 +1,7 @@
 const router = require("express").Router();
 const Session = require("../../models/Session");
 
-//get route for all goals
+//get route for all sessions
 router.get("/", async (req, res) => {
   try {
     const sessionData = await Session.findAll();
@@ -14,7 +14,7 @@ router.get("/", async (req, res) => {
   }
 });
 
-//get route for goals by id
+//get route for sessions by id
 router.get("/:id", async (req, res) => {
   try {
     const sessionData = await Session.findByPk(req.params.id, {});
@@ -30,7 +30,7 @@ router.get("/:id", async (req, res) => {
   }
 });
 
-//post route to make a new goal
+//post route to make a new session
 router.post("/", async (req, res) => {
   Session.create(req.body)
     .then((session) => {
@@ -46,11 +46,11 @@ router.post("/", async (req, res) => {
     });
 });
 
-//put route to updated goal
+//put route to sessions
 router.put("/:id", async (req, res) => {
   // update product data
   try {
-    // Update goal data
+    // Update sessions data
     await Session.update(req.body, {
       where: {
         id: req.params.id,

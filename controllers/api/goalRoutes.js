@@ -83,7 +83,7 @@ router.put("/:id", async (req, res) => {
     return res.sendStatus(200);
   } catch (error) {
     console.error(error);
-    return res.status(400).json({ error: "Failed to update the goal." });
+    return res.status(400).json({ error: "Failed to update the daily Log." });
   }
 });
 
