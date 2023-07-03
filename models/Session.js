@@ -1,5 +1,7 @@
 const { Model, DataTypes } = require("sequelize");
 const sequelize = require("../config/connection");
+const Goal = require("./Goal");
+const Daily = require("./Daily");
 
 class Session extends Model {}
 
@@ -31,10 +33,10 @@ Session.init(
     },
 
     log_id: {
-      type: DataTypes.DATE,
+      type: DataTypes.INTEGER,
       allowNull: false,
       references: {
-        model: Daily,
+        model: "daily",
         key: "id",
       },
     },
@@ -51,16 +53,16 @@ Session.init(
     //to help visualize data later on I am including "G". this will require Const instance = await Model.create;
     //use consolue.log(instance.cutomID) to check that output is correct.
     hooks: {
-      beforeCreate: async (goal) => {
-        goal.customId = "G" + goal.id;
+      beforeCreate: async (session) => {
+        session.customId = "S" + session.id;
       },
     },
     sequelize,
     timestamps: false,
     freezeTableName: true,
     underscored: true,
-    modelName: "goal",
+    modelName: "session",
   }
 );
 
-module.exports = Goal;
+module.exports = Session;
