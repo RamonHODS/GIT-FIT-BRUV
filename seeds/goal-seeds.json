@@ -5,7 +5,7 @@
     "motivation": "motivation 1",
     "outcome": "outcome 1",
     "notes": "goal notes 1",
-    "userID": 1
+    "userId": 1
   },
   {
     "goal_type": "Mental",
@@ -13,6 +13,6 @@
     "motivation": "motivation 2",
     "outcome": "outcome 2",
     "notes": "goal notes 2",
-    "userID": 2
+    "userId": 2
   }
 ]
