@@ -46,7 +46,7 @@ router.post("/", async (req, res) => {
     });
 });
 
-//put route to sessions
+//put route to update  sessions
 router.put("/:id", async (req, res) => {
   // update product data
   try {

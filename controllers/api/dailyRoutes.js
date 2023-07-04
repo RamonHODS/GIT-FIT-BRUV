@@ -32,7 +32,7 @@ router.get("/:id", async (req, res) => {
 });
 
 // Get route for daily logs by user
-router.get("/user/:userId", async (req, res) => {
+router.get("/daily/:dailyId", async (req, res) => {
   try {
     const { userId } = req.params;
 
