@@ -26,14 +26,6 @@ Goal.init(
       type: DataTypes.ENUM("active", "resting", "met"),
       allowNull: false,
     },
-    motivation: {
-      type: DataTypes.STRING(25),
-      allowNull: false,
-    },
-    outcome: {
-      type: DataTypes.STRING(255),
-      allowNull: false,
-    },
     notes: {
       type: DataTypes.TEXT,
       allowNull: true,

@@ -70,7 +70,7 @@ router.post("/", async (req, res) => {
 });
 
 //put route to updated goal
-router.put("/:id", async (req, res) => {
+router.put("/:id/update", async (req, res) => {
   // update product data
   try {
     // Update goal data
