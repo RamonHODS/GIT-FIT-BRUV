@@ -13,15 +13,14 @@ Session.init(
       primaryKey: true,
       autoIncrement: true,
     },
-    //I would like to consider adding an additional model to provide sub options
-    notes: {
-      type: DataTypes.TEXT,
-      allowNull: true,
-    },
     createdAt: {
       type: DataTypes.TIME,
       defaultValue: DataTypes.NOW,
       allowNull: false,
+    },
+    notes: {
+      type: DataTypes.TEXT,
+      allowNull: true,
     },
 
     goal_num: {
@@ -32,14 +31,6 @@ Session.init(
       },
     },
 
-    log_id: {
-      type: DataTypes.INTEGER,
-      allowNull: false,
-      references: {
-        model: "daily",
-        key: "id",
-      },
-    },
     userId: {
       type: DataTypes.INTEGER,
       references: {
