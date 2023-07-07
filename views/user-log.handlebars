@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="../css/user-log.css">
+  <title>Daily Log Page</title>
+</head>
+<body>
+  <header>
+    <h1 class="page-title">DAILY LOG</h1>
+  </header>
+
+  <section class="date-section">
+    <div class="card">
+      <h2 class="card-title">Current Date</h2>
+      <p class="current-date">{{ currentDate }}</p>
+    </div>
+  </section>
+
+  <section class="log-section">
+    <div class="card">
+      <h2 class="card-title">WHAT'D WE DO TODAY, BRUV?</h2>
+      <div class="exercise-dropdown">
+        <select id="exercise-dropdown">
+          {{#each notes}}
+          <option value="{{ value }}">{{ name }}</option>
+          {{/each}}
+        </select>
+      </div>
+      <div class="goal-dropdown">
+        <label for="goal-dropdown">Apply to Goal:</label>
+        <select id="goal-dropdown">
+          {{#each goals}}
+          <option value="{{ value }}">{{ name }}</option>
+          {{/each}}
+        </select>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <a href="../html/homepage.html"><button>BACK HOME, BRUV</button></a>
+  </footer>
+
+  <script src=""></script>
+</body>
+</html>
