@@ -1,15 +1,8 @@
 const router = require("express").Router();
-// const app = require("../../server");
+
 const User = require("../../models/User");
 const withAuth = require("../../utils/auth");
-// const session = require("express-session");
-// app.use(
-//   session({
-//     secret: "make a secret key here",
-//     resave: false,
-//     saveUninitialized: true,
-//   })
-// );
+
 //get all users
 router.get("/", async (req, res) => {
   try {
