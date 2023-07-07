@@ -1,1 +1,5 @@
-[{ "createdAt": "" }, { "createdAt": "" }, { "createdAt": "" }]
+[
+  { "createdAt": "", "userId": 1 },
+  { "createdAt": "", "userId": 2 },
+  { "createdAt": "", "userId": 1 }
+]
