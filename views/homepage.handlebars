@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="../css/homepage.css">
+  <title>Home Page</title>
+</head>
+<body>
+  <header>
+    <h1>GIT-FIT-BRUV</h1>
+  </header>
+
+  <section class="welcome-sect">
+    <div class="welcome-cont">
+      <h2>WELCOME BACK, BRUV!</h2>
+      <div class="button-cont">
+        <a href="../html/goals.html"><button>Goals</button></a>
+        <a href="../html/progress.html"><button>Progress</button></a>
+        <a href="../html/user-log.html"><button>Log</button></a>
+      </div>
+    </div>
+  </section>
+
+  <section class="profile-sect">
+    <img src="../../images/placeholder-icon2.jpg" alt="Profile Icon" class="profile-icon">
+    <div class="goals-sect">
+        <div class="goals-cont">
+          <h3>Big Three Goals</h3>
+          <ol>
+            {{#each goals}}
+            <li>{{this}}</li>
+            {{/each}}
+          </ol>
+        </div>
+    </div>
+  </section>
+
+  <section class="progress-sect">
+    <!-- Graph showing progress goes here -->
+  </section>
+
+  <section class="log-sect">
+    <div class="log-cont">
+      <h3>Recent Log</h3>
+      <p>Date: {{ logDate }}</p>
+      <p>Exercises logged: {{ exerciseCount }}</p>
+    </div>
+  </section>
+
+  <script src=""></script>
+</body>
+</html>
