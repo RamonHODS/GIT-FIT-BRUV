@@ -3,6 +3,7 @@ const session = require("express-session");
 const exphbs = require("express-handlebars");
 const path = require("path");
 const routes = require("./controllers/");
+const homeRoutes = require("./controllers/homeRoutes");
 const dateFormatter = require("./utils/dateFormatter");
 
 const sequelize = require("./config/connection");
@@ -34,11 +35,14 @@ app.use(express.static(path.join(__dirname, "public")));
 app.use(session(sess));
 
 app.use(routes);
+app.use(homeRoutes);
 
 app.get("/", (req, res) => {
-  res.render("layouts/main");
+  res.render("login");
 });
 
 sequelize.sync({ force: false }).then(() => {
-  app.listen(PORT, () => console.log("Now listening"));
+  app.listen(PORT, () =>
+    console.log("Now listening on: http://localhost:" + PORT)
+  );
 });

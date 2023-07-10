@@ -1,5 +1,6 @@
 const router = require("express").Router();
-
+const Session = require("../../models/Session");
+const Goal = require("../../models/Goal");
 const User = require("../../models/User");
 const withAuth = require("../../utils/auth");
 
@@ -31,7 +32,7 @@ router.get("/:id", async (req, res) => {
 });
 
 //* Create a new user
-router.post("/", async (req, res) => {
+router.post("/signup", async (req, res) => {
   try {
     const userData = await User.create(req.body);
 
@@ -56,7 +57,7 @@ router.post("/login", async (req, res) => {
     if (!userData) {
       res
         .status(400)
-        .json({ message: "Incorrect email or password, please try again" });
+        .json({ message: "Incorrect username or password, please try again" });
       return;
     }
 
@@ -68,13 +69,28 @@ router.post("/login", async (req, res) => {
         .json({ message: "Incorrect email or password, please try again" });
       return;
     }
+    try {
+      const goals = await Goal.findAll({
+        where: { userId: userData.id },
+      });
+      const sessions = await Session.findAll({
+        where: { userId: userData.id },
+      });
 
-    req.session.save(() => {
-      req.session.user_id = userData.id;
-      req.session.logged_in = true;
+      req.session.save(() => {
+        req.session.user_id = userData.id;
+        req.session.logged_in = true;
 
-      res.json({ user: userData, message: "You are now logged in!" });
-    });
+        res.json({
+          user: userData,
+          message: "You are now logged in!",
+          goals: goals.map((goal) => goal.toJSON()),
+          sessions: sessions.map((session) => session.toJSON()),
+        });
+      });
+    } catch (error) {
+      console.log("Error retrieving user's goals:", error);
+    }
   } catch (err) {
     res.status(400).json(err);
   }
