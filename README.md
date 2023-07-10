@@ -41,9 +41,9 @@ To use this app, just visit the website, create a user account if you don't alre
 ## Credits
 
 - [Joshua V. Garcia](https://github.com/garciajv86)
-- Hailey Hughes
-- Connor Blanchard
-- Ramon Da Silveira
+- [Hailey Hughes](https://github.com/haileyraehughes89)
+- [Connor Blanchard](https://github.com/BlanchardConnor)
+- [Ramon Da Silveira](https://github.com/RamonHODS)
 
 
 ## License
