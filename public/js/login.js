@@ -18,7 +18,7 @@ const loginFormHandler = async (event) => {
       const responseData = await response.json();
 
       if (responseData.user && responseData.logged_in) {
-        document.location.replace("/homepage");
+        res.render("hompage");
       } else {
         alert("Login failed. Please try again.");
       }
