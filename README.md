@@ -20,7 +20,7 @@ This project is a fullstack fitness app, where users can login or register as a 
 ## Link
 
 Below are links to the deployed app and the repo:<br>
-[Git_Fit_Bruv](https://git-fit-bruv-dc116a44b74c.herokuapp.com/)<br>
+[Git_Fit_Bruv](https://git-fit-bruv-01128a5a22d6.herokuapp.com/)<br>
 [Projects_Repo](https://github.com/RamonHODS/GIT-FIT-BRUV)
 
 ## ScreenShot
