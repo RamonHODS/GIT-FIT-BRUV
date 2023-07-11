@@ -32,13 +32,14 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, "public")));
 
-app.use(session(sess));
 
 app.use(routes);
 app.use(homeRoutes);
 
+app.use(session(sess));
+
 app.get("/", (req, res) => {
-  res.render("login");
+res.render("login");
 });
 
 sequelize.sync({ force: false }).then(() => {
