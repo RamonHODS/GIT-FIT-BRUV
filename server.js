@@ -4,7 +4,7 @@ const exphbs = require("express-handlebars");
 const path = require("path");
 const routes = require("./controllers/");
 const homeRoutes = require("./controllers/homeRoutes");
-const dateFormatter = require("./utils/dateFormatter");
+// const dateFormatter = require("./utils/dateFormatter");
 
 const sequelize = require("./config/connection");
 
